@@ -29,5 +29,28 @@ int main()
 
     cout <<endl<<endl;
 
+    cout << "2. Build an algorithm that requests 5 values from the user, stores them in a vector of 5 integer positions. Then, find out how many elements are greater than the element in the first position.";
+
+    int vectorSize = 5;
+    int a[vectorSize], i=0, biggerThanFirst=0;
+
+    while (i<vectorSize){
+        cout<<"a["<<i<<"] = ";
+        cin>>a[i];
+
+        i++;
+    }
+
+    i=1;
+    while (i<vectorSize){
+        if (a[i] > a[0]){
+            biggerThanFirst++;
+        }
+        i++;
+    }
+    cout<<"There are "<<biggerThanFirst<<" elements greater than the vector element "<<a[0]<<".";
+
+    cout <<endl<<endl;
+
     return 0;
 }
