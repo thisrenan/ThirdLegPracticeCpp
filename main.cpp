@@ -148,5 +148,28 @@ int main()
         i++;
     }
 
+    cout <<endl<<endl;
+
+    cout << "6. Build an algorithm that requests 5 integer values from the user and stores them in a vector. Then, the value of the vector should be inverted using a second vector."<<endl;
+
+    vectorSize = 5;
+    int vector6One[vectorSize], vector6Two[vectorSize];
+
+    i=0;
+    while (i<vectorSize)
+    { 
+        cout<<"VectorOne["<<i<<"] = ";
+        cin>>vector6One[i];
+        i++;
+    }
+
+
+    i=0;
+    while (i<vectorSize){
+        vector6Two[i]=vector6One[vectorSize-1-i];
+        cout<<"\nVectorOne["<<i<<"] = "<<vector6One[i]<<" / Vector["<<i<<"] = "<<vector6Two[i];
+        i++;
+    }
+
     return 0;
 }
