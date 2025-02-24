@@ -6,7 +6,7 @@ int main()
 {
     cout << "1. Write an algorithm that reads a vector of 30 positions and reports how many elements are multiples of 2 and how many are multiples of 3.";
 
-    int vectorSize = 5;
+    int vectorSize = 30;
     int vector1[vectorSize], i=0, m2=0, m3=0;
 
     while (i<vectorSize)
@@ -84,6 +84,36 @@ int main()
         cout<<"\n"<<vector3One[i]<<" x "<<vector3Two[i]<<" = "<<vector3Three[i];
         i++;
     }
+
+    cout <<endl<<endl;
+
+    cout << "4. Write an algorithm that reads two vectors (A and B) of ten integer positions. The algorithm must then subtract the first element of A from the last element of B, and accumulate the value, subtract the second element of A from the penultimate element of B, accumulating the result, and so on. Display the result of the accumulated sum.";
+
+    vectorSize = 10;
+    int vector4One[vectorSize], vector4Two[vectorSize], sum=0;
+
+    i=0;
+    while(i<vectorSize){
+        cout<<"vectorOne["<<i<<"] = ";
+        cin>>vector4One[i];
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize){
+        cout<<"vectorTwo["<<i<<"] = ";
+        cin>>vector4Two[i];
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize){
+        sum=sum+(vector4Two[9-i] - vector4One[i]);
+        cout<<"\n"<<" + "<<vector4Two[9-i]<<" - "<<vector4One[i]<<" = "<<sum;
+        i++;
+    }
+
+    cout << endl << "The final sum is " << sum;
 
     cout <<endl<<endl;
 
