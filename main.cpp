@@ -200,6 +200,28 @@ int main()
         i++;
     }
 
+    cout <<endl<<endl;
+
+    cout << "8. Write a program that loads a vector with 10 integer elements and checks for the existence of elements that are multiples of 5, showing the positions in which these elements appear."<<endl;
+
+    vectorSize = 10;
+    int vector8[vectorSize]; ///criando um vetor com T posi��es
+
+    i=0;
+    while(i<vectorSize){ ///la�o para preencher todo vetor
+        cout<<"vector["<<i<<"] = ";
+        cin>>vector8[i]; ///coloca o valor digitado na posi��o do vetor
+        i++; ///equivalente a indice++;
+    }
+
+    i=0;
+    while(i<vectorSize){
+        if (vector8[i]%5==0){ ///se o conte�do da posi��o do vetor for m�ltiplo de 5
+            cout<<"\nvector["<<i<<"] = "<<vector8[i];
+        }
+        i++; ///equivalente a indice++;
+    }
+
     return 0;
 }
 
