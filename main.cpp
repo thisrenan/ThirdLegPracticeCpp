@@ -227,6 +227,11 @@ int main()
         i++;
     }
 
+    cout <<endl<<endl;
+
+    cout << "9. Read 30 values and place the even values in one vector and the odd values in another. After reading, calculate the sum of the two vectors and display the one with the highest value."<<endl;
+    
+
     return 0;
 }
 
