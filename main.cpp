@@ -179,23 +179,26 @@ int main()
     int vector7[vectorSize];
     temp = 0;
 
-    i=0; ///inicio do vetor
-    while (i<vectorSize){ ///enquanto menor que tamanho do vetor
-        cout<<"vector["<<i<<"] = "; ///escreve o pedido na tela
-        cin>>vector7[i]; ///armazena na posi��o indice o valor digitado
+    i=0;
+    while (i<vectorSize)
+    {
+        cout<<"vector["<<i<<"] = ";
+        cin>>vector7[i];
         i++;
     }
 
-    i=0; ///inicio do vetor
-    while (i<vectorSize/2){ ///enquanto menor que tamanho do vetor
+    i=0;
+    while (i<vectorSize/2)
+    {
         temp=vector7[i];
-        vector7[i]=vector7[vectorSize-1-i]; ///�ltima depois pen�ltima e assim por diante
+        vector7[i]=vector7[vectorSize-1-i];
         vector7[vectorSize-1-i]=temp;
         i++;
     }
 
-    i=0; ///inicio do vetor
-    while (i<vectorSize){ ///enquanto menor que tamanho do vetor
+    i=0;
+    while (i<vectorSize)
+    {
         cout<<vector7[i]<<" ";
         i++;
     }
