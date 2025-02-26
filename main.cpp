@@ -251,7 +251,7 @@ int main()
             vector9Odd[auxOdd] = value;
             auxOdd++;
         }
-        
+
         i++;
     }
 
@@ -274,6 +274,35 @@ int main()
     else 
         cout<<"\nEven won with a total of "<<sumEven;
     
+    cout<<endl<<endl;
+
+    cout<<"10. Build an algorithm that fills a vector with 5 integer values. Then check if the number 7 is in the vector. If so, display the position in which it was found. If it is found more than once, also show how many times it was found."<<endl;
+
+    vectorSize = 5;
+    int vector10[vectorSize];
+    int n7=0;
+
+    i=0;
+    while(i<vectorSize){
+        cout<<"vector["<<i<<"] = ";
+        cin>>vector10[i];
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize){
+        cout<<vector10[i]<<" ";
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize){
+        if(vector10[i]%7==0){
+            n7++;
+            cout<<"\n7 found in vector["<<i<<"] for "<<n7<<" times";
+        }
+        i++;
+    }
     
 
     return 0;
