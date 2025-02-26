@@ -359,6 +359,51 @@ int main()
         i++;
     }
 
+    cout<<endl<<endl;
+
+    cout<<"13. Write an algorithm that fills a vector of 10 positions with generated values (use rand), and ensures that there are no repeated numbers. Then, sort the vector and show it on the screen."<<endl;
+
+    vectorSize = 10;
+    int vector13[vectorSize], aux;
+    srand(time(NULL));
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector13[i]=rand()%10;
+        for(int j=0;j<i;j++){
+            if(vector13[j]==vector13[i])
+			{
+                i--;
+            }
+        }
+    }
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        cout<<vector13[i]<<" ";
+    }
+
+
+    for(int i=0;i<vectorSize-1;i++)
+	{
+        for(int j=0;j<vectorSize-1;j++)
+		{
+            if(vector13[j]>vector13[j+1])
+			{
+                aux=vector13[j];
+                vector13[j]=vector13[j+1];
+                vector13[j+1]=aux;
+            }
+        }
+    }
+
+
+    cout<<"\n";
+    for(int i=0;i<vectorSize;i++)
+	{
+        cout<<vector13[i]<<" ";
+    }
+
 
     return 0;
 }
