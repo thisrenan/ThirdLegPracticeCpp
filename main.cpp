@@ -240,38 +240,41 @@ int main()
     while(i<vectorSize)
     {
         cout<<"vector["<<i<<"] = ";
+        cin>>value;
         if (value %2 == 0)
         {
-            cin>>vector9Even[auxEven];
+            vector9Even[auxEven] = value;
             auxEven++;
         }
         else
         {
-            cin>>vector9Odd[auxOdd];
+            vector9Odd[auxOdd] = value;
             auxOdd++;
         }
-
-        i=0;
-        while(i<auxEven){
-            sumEven=sumEven+vector9Even[i];
-            i++;
-        }
-    
-        i=0;
-        while(i<auxOdd){
-            sumOdd=sumOdd+vector9Odd[i];
-            i++;
-        }
-        if(sumOdd>sumEven){
-            cout<<"\Odd won with a total of "<<sumOdd;
-        } else {
-            cout<<"\nEven won with a total of "<<sumEven;
-        }
-
+        
         i++;
     }
 
+    i=0;
+    while(i<auxEven)
+    {
+        sumEven=sumEven+vector9Even[i];
+        i++;
+    }
 
+    i=0;
+    while(i<auxOdd)
+    {
+        sumOdd=sumOdd+vector9Odd[i];
+        i++;
+    }
+
+    if(sumOdd>sumEven)
+        cout<<"\nOdd won with a total of "<<sumOdd;
+    else 
+        cout<<"\nEven won with a total of "<<sumEven;
+    
+    
 
     return 0;
 }
