@@ -231,6 +231,47 @@ int main()
 
     cout << "9. Read 30 values and place the even values in one vector and the odd values in another. After reading, calculate the sum of the two vectors and display the one with the highest value."<<endl;
     
+    vectorSize = 30;
+    int vector9Even[vectorSize];
+    int vector9Odd[vectorSize];
+    int value, auxEven=0, auxOdd=0, sumEven=0, sumOdd=0;
+
+    i=0;
+    while(i<vectorSize)
+    {
+        cout<<"vector["<<i<<"] = ";
+        if (value %2 == 0)
+        {
+            cin>>vector9Even[auxEven];
+            auxEven++;
+        }
+        else
+        {
+            cin>>vector9Odd[auxOdd];
+            auxOdd++;
+        }
+
+        i=0;
+        while(i<auxEven){
+            sumEven=sumEven+vector9Even[i];
+            i++;
+        }
+    
+        i=0;
+        while(i<auxOdd){
+            sumOdd=sumOdd+vector9Odd[i];
+            i++;
+        }
+        if(sumOdd>sumEven){
+            cout<<"\Odd won with a total of "<<sumOdd;
+        } else {
+            cout<<"\nEven won with a total of "<<sumEven;
+        }
+
+        i++;
+    }
+
+
 
     return 0;
 }
