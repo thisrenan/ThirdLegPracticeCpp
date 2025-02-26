@@ -370,7 +370,8 @@ int main()
     for(int i=0;i<vectorSize;i++)
 	{
         vector13[i]=rand()%10;
-        for(int j=0;j<i;j++){
+        for(int j=0;j<i;j++)
+        {
             if(vector13[j]==vector13[i])
 			{
                 i--;
@@ -378,11 +379,12 @@ int main()
         }
     }
 
+    cout<<endl;
+
     for(int i=0;i<vectorSize;i++)
 	{
         cout<<vector13[i]<<" ";
     }
-
 
     for(int i=0;i<vectorSize-1;i++)
 	{
@@ -397,10 +399,10 @@ int main()
         }
     }
 
+    cout<<endl;
 
-    cout<<"\n";
     for(int i=0;i<vectorSize;i++)
-	{
+	{        
         cout<<vector13[i]<<" ";
     }
 
