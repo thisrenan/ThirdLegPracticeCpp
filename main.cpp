@@ -283,26 +283,25 @@ int main()
     int n7=0;
 
     i=0;
-    while(i<vectorSize){
+    while(i<vectorSize)
+    {
         cout<<"vector["<<i<<"] = ";
         cin>>vector10[i];
         i++;
     }
 
     i=0;
-    while(i<vectorSize){
-        cout<<vector10[i]<<" ";
-        i++;
-    }
-
-    i=0;
-    while(i<vectorSize){
-        if(vector10[i]%7==0){
+    while(i<vectorSize)
+    {
+        if(vector10[i]%7==0)
+        {
             n7++;
             cout<<"\n7 found in vector["<<i<<"] for "<<n7<<" times";
         }
+
         i++;
     }
+    
     
 
     return 0;
