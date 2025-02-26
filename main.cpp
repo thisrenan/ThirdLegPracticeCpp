@@ -302,11 +302,29 @@ int main()
         i++;
     }
     
-    
+    cout<<endl<<endl;
+
+    cout<<"11. Write an algorithm that fills a vector of 10 positions with random numbers (between 10 and 30) and informs how many numbers are multiples of 5, and in which position they are found."<<endl;
+
+    vectorSize = 10;
+    int vector11[vectorSize],n5=0;
+    srand(time(NULL));
+
+    for(int i=0;i<vectorSize;i++)
+    {
+        vector11[i]=rand()%21+10;
+        cout<<vector11[i]<<" ";
+    }
+
+    for(int i=0;i<vectorSize;i++)
+    {
+        if(vector11[i]%5==0)
+        {
+            n5++;
+            cout<<"\nMultiple of 5 found in vector["<<i<<"] by "<<n5<<" times";
+        }
+    }
+
 
     return 0;
 }
-
-
-
-
