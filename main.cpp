@@ -325,6 +325,40 @@ int main()
         }
     }
 
+    cout<<endl<<endl;
+
+    cout<<"12. Build an algorithm that requests 5 values from the user, stores them in a vector of 5 integer positions. Then check if the number 13 is in the vector. If so, display the position in which it was found. If it is found more than once, also show how many times it was found."<<endl;
+
+    vectorSize = 5;
+    int vector12[vectorSize],n13=0;
+
+    i=0;
+    while(i<vectorSize)
+    {
+        cout<<"vector["<<i<<"] = ";
+        cin>>vector12[i];
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize)
+    {
+        cout<<vector12[i]<<" ";
+        i++;
+    }
+
+    i=0;
+    while(i<vectorSize)
+    {
+        if(vector12[i]%13==0)
+        {
+            n13++;
+            cout<<"\n13 found in vector["<<i<<"] for "<<n7<<" times";
+        }
+
+        i++;
+    }
+
 
     return 0;
 }
