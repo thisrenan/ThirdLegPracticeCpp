@@ -6,7 +6,7 @@ int main()
 {
     cout << "1. Write an algorithm that reads a vector of 30 positions and reports how many elements are multiples of 2 and how many are multiples of 3."<<endl;
 
-    int vectorSize = 5;
+    int vectorSize = 30;
     int vector1[vectorSize], i=0, m2=0, m3=0;
 
     while (i<vectorSize)
@@ -27,7 +27,6 @@ int main()
 
     cout<<"M2: "<<m2<<"\nM3:"<<m3;
     cout <<endl<<endl;
-    /*
 
     cout << "2. Build an algorithm that requests 5 values from the user, stores them in a vector of 5 integer positions. Then, find out how many elements are greater than the element in the first position."<<endl;
 
@@ -578,7 +577,7 @@ int main()
     }
 
     cout<<endl<<endl;
-    */
+   
 
     cout<<"17. Create an algorithm that fills two vectors of size 10 (without having repeated elements within the vector itself). Then, create a third vector that is the difference between the first two vectors. Note: a difference vector is one formed by the elements that are in Vector A, but not in Vector B."<<endl;
 
@@ -619,11 +618,11 @@ int main()
         cout<<"\nvectorb["<<i<<"] = "<<vector17b[i];
     }
 
-    int auxQuantityAdded = 0;    
+    auxQuantityAdded = 0;    
     for (int i=0;i<vectorSize;i++)
     {     
         bool auxInUse = false;   
-        
+
         for (int j=0;j<vectorSize;j++)
         {
             if (vector17a[i] == vector17b[j])
@@ -644,7 +643,61 @@ int main()
         cout<<"\nvectorfinal["<<i<<"] = "<<vector17c[i];
     }
 
+    cout<<endl<<endl;
 
+    cout<<"18. Fill two vectors of size 5. Then create a third vector composed by merging the first two."<<endl;
+
+    vectorSize = 10;
+    int vector18a[vectorSize], vector18b[vectorSize], vector18final[vectorSize*2];
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector18a[i]=rand()%20;
+        for(int j=0;j<i;j++)
+        {
+            if(vector18a[j]==vector18a[i])
+			{
+                i--;
+            }
+        }
+    }
+
+    for (int i=0;i<vectorSize;i++)
+    {
+        cout<<"\nvectora["<<i<<"] = "<<vector18a[i];
+    }
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector18b[i]=rand()%20;
+        for(int j=0;j<i;j++)
+        {
+            if(vector18b[j]==vector18b[i])
+			{
+                i--;
+            }
+        }
+    }    
+
+    for (int i=0;i<vectorSize;i++)
+    {
+        cout<<"\nvectorb["<<i<<"] = "<<vector18b[i];
+    }    
+
+    auxQuantityAdded = 0;
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector18final[auxQuantityAdded] = vector18a[i];
+        auxQuantityAdded++;
+
+        vector18final[auxQuantityAdded] = vector18b[i];
+        auxQuantityAdded++;                       
+    }
+
+    for (int i=0;i<auxQuantityAdded;i++)
+    {
+        cout<<"\nvectorfinal["<<i<<"] = "<<vector18final[i];
+    }
 
     return 0;
 }
