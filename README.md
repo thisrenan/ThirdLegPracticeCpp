@@ -30,7 +30,7 @@ Remember to use vector in all the execises.
 
 11. Write an algorithm that fills a vector of 10 positions with random numbers (between 10 and 30) and informs how many numbers are multiples of 5, and in which position they are found.
 
-12. Build an algorithm that requests 5 values ​​from the user, stores them in a vector of 5 integer positions. Then check if the number 7 is in the vector. If so, display the position in which it was found. If it is found more than once, also show how many times it was found.
+12. Build an algorithm that requests 5 values ​​from the user, stores them in a vector of 5 integer positions. Then check if the number 13 is in the vector. If so, display the position in which it was found. If it is found more than once, also show how many times it was found.
 
 13. Write an algorithm that fills a vector of 10 positions with generated values ​​(use rand), and ensures that there are no repeated numbers. Then, sort the vector and show it on the screen.
     
