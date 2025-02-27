@@ -353,7 +353,7 @@ int main()
         if(vector12[i]%13==0)
         {
             n13++;
-            cout<<"\n13 found in vector["<<i<<"] for "<<n7<<" times";
+            cout<<"\n13 found in vector["<<i<<"] for "<<n13<<" times";
         }
 
         i++;
@@ -404,6 +404,41 @@ int main()
     for(int i=0;i<vectorSize;i++)
 	{        
         cout<<vector13[i]<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    cout<<"14. Write a program that fills a vector of 30 positions with the first prime numbers starting from 333. Display the resulting vector on the screen."<<endl;
+
+    vectorSize = 30;
+    int vector14[vectorSize];
+    int primeTest;
+    int firstPrime=333;
+
+    i=0;
+    while (i<vectorSize)
+    {
+        primeTest=0;
+        for (int i=2; i<firstPrime;i++)
+        {
+            if (firstPrime%i==0)
+            {
+                primeTest=1;
+            }
+        }
+
+        if (primeTest==0)
+        {
+            vector14[i]=firstPrime;
+            i++;
+        }
+
+        firstPrime++;
+    }
+
+    for (int i=0;i<vectorSize;i++)
+    {
+        cout<<"\nvector["<<i<<"] = "<<vector14[i];
     }
 
 
