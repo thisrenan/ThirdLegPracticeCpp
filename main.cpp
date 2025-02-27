@@ -6,7 +6,7 @@ int main()
 {
     cout << "1. Write an algorithm that reads a vector of 30 positions and reports how many elements are multiples of 2 and how many are multiples of 3."<<endl;
 
-    int vectorSize = 30;
+    int vectorSize = 5;
     int vector1[vectorSize], i=0, m2=0, m3=0;
 
     while (i<vectorSize)
@@ -28,6 +28,7 @@ int main()
     cout<<"M2: "<<m2<<"\nM3:"<<m3;
     cout <<endl<<endl;
 
+    /*
     cout << "2. Build an algorithm that requests 5 values from the user, stores them in a vector of 5 integer positions. Then, find out how many elements are greater than the element in the first position."<<endl;
 
     vectorSize = 5;    
@@ -441,6 +442,83 @@ int main()
         cout<<"\nvector["<<i<<"] = "<<vector14[i];
     }
 
+    cout<<endl<<endl;
+
+    */
+    cout<<"15. Create an algorithm that fills two vectors of size 10 (without having repeated elements within the vector itself). Then, create a third vector that is the union between the first two vectors. Note: the union vector is composed of all the elements of both vectors, without repetition."<<endl;
+
+    vectorSize = 10;
+    int vector15a[vectorSize], vector15b[vectorSize], vector15c[vectorSize*2], vector15final[vectorSize*2];
+
+    cout << vectorSize;
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector15a[i]=rand()%20;
+        for(int j=0;j<i;j++)
+        {
+            if(vector15a[j]==vector15a[i])
+			{
+                i--;
+            }
+        }
+    }
+
+    for (int i=0;i<vectorSize;i++)
+    {
+        cout<<"\nvectora["<<i<<"] = "<<vector15a[i];
+    }
+
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector15b[i]=rand()%20;
+        for(int j=0;j<i;j++)
+        {
+            if(vector15b[j]==vector15b[i])
+			{
+                i--;
+            }
+        }
+    }    
+
+    for (int i=0;i<vectorSize;i++)
+    {
+        cout<<"\nvectorb["<<i<<"] = "<<vector15b[i];
+    }    
+
+    int auxQuantityAdded = 0;
+    for(int i=0;i<vectorSize;i++)
+	{
+        vector15c[auxQuantityAdded] = vector15a[i];
+        auxQuantityAdded++;
+
+        vector15c[auxQuantityAdded] = vector15b[i];
+        auxQuantityAdded++;                       
+    }
+
+    auxQuantityAdded = 0;
+    for (int i = 0; i < vectorSize*2; i++) 
+    {
+        bool auxInUse = false;
+        for (int j = 0; j < vectorSize*2; j++) 
+        {        
+            if (vector15c[i] == vector15final[j])
+            {
+                auxInUse = true;
+            }
+        }
+
+        if (auxInUse == false)
+        {
+            vector15final[auxQuantityAdded] = vector15c[i];
+            auxQuantityAdded++;
+        }
+    }
+
+    for (int i=0;i<auxQuantityAdded;i++)
+    {
+        cout<<"\nvectorfinal["<<i<<"] = "<<vector15final[i];
+    }
 
     return 0;
 }
